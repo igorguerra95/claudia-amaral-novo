@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --color-quartz-50: #fdf2f8;
+  --color-quartz-100: #fce7f3;
+  --color-quartz-200: #fbcfe8;
+  --color-quartz-300: #f9a8d4;
+  --color-quartz-400: #f472b6;
+  --color-quartz-500: #ec4899;
+  --color-quartz-600: #db2777;
+  --color-quartz-700: #be185d;
+  --color-quartz-800: #9d174d;
+  --color-quartz-900: #831843;
+
+  --color-ice-50: #f8fafc;
+  --color-ice-100: #f1f5f9;
+  --color-ice-200: #e2e8f0;
+
+  --color-surface-canvas: #faf7f6;
+  --color-surface-card: #ffffff;
+  --color-ink-main: #231c19;
+  --color-ink-secondary: #5a504a;
+  --color-ink-tertiary: #877c75;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--color-ink-main);
+    background-color: var(--color-surface-canvas);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-serif);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom premium styling tokens */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.glass-quartz {
+  background: rgba(253, 242, 248, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 114, 182, 0.25);
+}
+
+.hairline-border {
+  border: 1px solid rgba(244, 114, 182, 0.16);
+}
+
+.subtle-border {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.shadow-elevation-1 {
+  box-shadow: 0 4px 20px -2px rgba(131, 24, 67, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.shadow-elevation-2 {
+  box-shadow: 0 12px 36px -4px rgba(131, 24, 67, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+}
+
+.shadow-elevation-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shadow-elevation-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -6px rgba(131, 24, 67, 0.12), 0 8px 16px -2px rgba(0, 0, 0, 0.04);
+}
+
+/* Subtle background grain simulation */
+.bg-ambient-glow {
+  background: radial-gradient(circle at 15% 20%, rgba(244, 114, 182, 0.15) 0%, transparent 45%),
+              radial-gradient(circle at 85% 70%, rgba(251, 207, 232, 0.2) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(248, 250, 252, 0.8) 0%, transparent 100%);
+}

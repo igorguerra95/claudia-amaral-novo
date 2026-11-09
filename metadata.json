@@ -1,0 +1,8 @@
+{
+  "name": "Claudia Amaral Ferreira | Psicologia e Neuropsicologia",
+  "description": "Atendimento psicológico clínico e avaliação neuropsicológica de alta precisão. Espaço seguro, acolhedor e baseado em evidências científicas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
